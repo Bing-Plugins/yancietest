@@ -1,8 +1,8 @@
-package cn.yistars.template.command;
+package cn.yistars.yancietest.command;
 
-import cn.yistars.template.BingTemplate;
-import cn.yistars.template.config.ConfigManager;
-import cn.yistars.template.config.LangManager;
+import cn.yistars.yancietest.yancietest;
+import cn.yistars.yancietest.config.ConfigManager;
+import cn.yistars.yancietest.config.LangManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,7 +18,7 @@ public class MainCommand implements CommandExecutor, TabCompleter {
     @Override
     public boolean onCommand(CommandSender sender, Command commands, String label, String[] args) {
         if (args.length == 0) {
-            sender.sendMessage("BingTemplate v%version% by Bing_Yanchi (TEMPLATE NEED EDIT)".replace("%version%", BingTemplate.instance.getDescription().getVersion()));
+            sender.sendMessage("BingTemplate v%version% by Bing_Yanchi (TEMPLATE NEED EDIT)".replace("%version%", yancietest.instance.getDescription().getVersion()));
 
             if (sender.hasPermission("BingTemplate.admin")) {
                 sender.sendMessage(LangManager.getLang("main-get-help"));
